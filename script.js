@@ -315,16 +315,25 @@ const handleFormSubmit = async (e) => {
     submitBtn.disabled = true;
     
     try {
-        // Simulate API call (replace with actual endpoint)
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        // Netlify form submission
+        const formData = new FormData(contactForm);
         
-        // Success
-        showNotification('Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapacağız.', 'success');
-        contactForm.reset();
+        const response = await fetch('/', {
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        });
+        
+        if (response.ok) {
+            // Success - redirect to thank you page
+            window.location.href = '/thank-you.html';
+        } else {
+            throw new Error('Form submission failed');
+        }
         
     } catch (error) {
         showNotification('Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.', 'error');
-    } finally {
+        
         // Reset button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;

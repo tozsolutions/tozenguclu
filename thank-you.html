@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mesajınız için teşekkürler - Modern Web Sitesi">
+    <title>Teşekkürler | Modern Web Sitesi</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/">
+                    <i class="fas fa-code"></i>
+                    <span>ModernSite</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Thank You Section -->
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="thank-you-content">
+                <div class="thank-you-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1>Mesajınız için Teşekkürler!</h1>
+                <p>
+                    Mesajınızı başarıyla aldık. En kısa sürede size dönüş yapacağız.
+                    Genellikle 24 saat içinde yanıtlarız.
+                </p>
+                <div class="thank-you-actions">
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-home"></i>
+                        Ana Sayfaya Dön
+                    </a>
+                    <a href="/#services" class="btn btn-secondary">
+                        <i class="fas fa-cogs"></i>
+                        Hizmetlerimizi İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding-top: 70px;
+        }
+
+        .thank-you-content {
+            text-align: center;
+            max-width: 600px;
+            padding: var(--spacing-3xl);
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-large);
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            color: #10b981;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .thank-you-content h1 {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-dark);
+        }
+
+        .thank-you-content p {
+            font-size: var(--font-size-lg);
+            color: var(--text-light);
+            margin-bottom: var(--spacing-2xl);
+            line-height: 1.6;
+        }
+
+        .thank-you-actions {
+            display: flex;
+            gap: var(--spacing-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .thank-you-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <!-- Auto redirect after 10 seconds -->
+    <script>
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 10000);
+    </script>
+</body>
+</html>

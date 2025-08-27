@@ -1,0 +1,265 @@
+═══════════════════════════════════════════════════════════════════
+                    NETLIFY YÜKLEME REHBERİ
+              Modern Web Sitesi - Adım Adım Kurulum
+═══════════════════════════════════════════════════════════════════
+
+🚀 NETLIFY'A YÜKLEME - 3 FARKLI YÖNTEMİ
+
+═══════════════════════════════════════════════════════════════════
+                    YÖNTEM 1: DRAG & DROP (EN KOLAY)
+═══════════════════════════════════════════════════════════════════
+
+1. 📁 DOSYALARI HAZIRLA:
+   - Tüm dosyaları bir klasöre topla
+   - Aşağıdaki dosyaların var olduğunu kontrol et:
+   
+   ✅ GEREKLI DOSYALAR:
+   ├── index.html
+   ├── styles.css  
+   ├── script.js
+   ├── netlify.toml
+   ├── _redirects
+   ├── thank-you.html
+   ├── 404.html
+   ├── favicon.svg
+   ├── manifest.json
+   ├── sitemap.xml
+   ├── robots.txt
+   └── sw.js
+
+2. 🌐 NETLIFY'A GİT:
+   - https://netlify.com adresine git
+   - "Sign up" ile hesap oluştur veya "Log in" ile giriş yap
+
+3. 🎯 DEPLOY ET:
+   - Ana sayfada "Sites" sekmesine tıkla
+   - "Add new site" > "Deploy manually" seç
+   - Tüm dosyaları seçip sürükle-bırak yap
+   - Otomatik deployment başlayacak (1-2 dakika)
+
+4. ✅ TAMAMLANDI!
+   - Site otomatik olarak yayına alınır
+   - Size rastgele bir URL verilir (örn: https://amazing-site-123.netlify.app)
+
+═══════════════════════════════════════════════════════════════════
+                YÖNTEM 2: GIT REPOSITORY (ÖNERİLEN)
+═══════════════════════════════════════════════════════════════════
+
+1. 📁 GIT REPOSITORY OLUŞTUR:
+   - GitHub, GitLab veya Bitbucket'ta yeni repo oluştur
+   - Tüm dosyaları repo'ya push et
+
+2. 🔗 NETLIFY'A BAĞLA:
+   - Netlify'da "Add new site" > "Import an existing project" seç
+   - Git provider'ını seç (GitHub/GitLab/Bitbucket)
+   - Repository'yi seç
+   - Build settings:
+     * Build command: (boş bırak)
+     * Publish directory: . (nokta)
+   - "Deploy site" tıkla
+
+3. 🔄 OTOMATİK DEPLOYMENT:
+   - Her git push'ta otomatik deploy olur
+   - Branch protection ile staging ortamı kurabilirsin
+
+═══════════════════════════════════════════════════════════════════
+                    YÖNTEM 3: NETLIFY CLI
+═══════════════════════════════════════════════════════════════════
+
+1. 💻 CLI KURULUMU:
+   ```bash
+   npm install -g netlify-cli
+   netlify login
+   ```
+
+2. 🚀 DEPLOY:
+   ```bash
+   cd /path/to/your/website
+   netlify deploy --prod --dir .
+   ```
+
+═══════════════════════════════════════════════════════════════════
+                    DEPLOYMENT SONRASI AYARLAR
+═══════════════════════════════════════════════════════════════════
+
+🔧 SİTE AYARLARI:
+
+1. 🏷️ SİTE ADI DEĞİŞTİRME:
+   - Site dashboard > "Site settings"
+   - "Change site name" ile özel ad ver
+   - Örnek: yourcompany-website.netlify.app
+
+2. 🌐 CUSTOM DOMAIN EKLEME:
+   - "Domain settings" > "Add custom domain"
+   - Kendi domain'inizi ekleyin
+   - DNS ayarlarını yapın
+
+3. 🔒 SSL SERTİFİKASI:
+   - Otomatik olarak Let's Encrypt SSL verilir
+   - "HTTPS" > "Force HTTPS" aktif edin
+
+4. 📧 FORM NOTIFICATIONS:
+   - "Forms" sekmesinde form gönderimlerini görürsünüz
+   - Email notifications kurabilirsiniz
+
+═══════════════════════════════════════════════════════════════════
+                    NETLIFY FORMS AYARLARI
+═══════════════════════════════════════════════════════════════════
+
+✅ FORM ÖZELLİKLERİ:
+- ✉️ Form gönderimleri otomatik kaydedilir
+- 📧 Email bildirimleri alabilirsiniz  
+- 🛡️ Spam koruması aktif
+- 📊 Form analitikleri mevcut
+
+🔧 FORM AYARLARI:
+1. Site dashboard > "Forms" sekmesi
+2. "contact" formunu bulun
+3. "Settings" > "Form notifications"
+4. Email adresinizi ekleyin
+
+═══════════════════════════════════════════════════════════════════
+                    PERFORMANS OPTİMİZASYONU
+═══════════════════════════════════════════════════════════════════
+
+⚡ NETLIFY ÖZELLİKLERİ:
+- 🗜️ Otomatik asset optimization
+- 🌍 Global CDN
+- ⚡ HTTP/2 ve HTTP/3 desteği
+- 🔄 Instant cache invalidation
+
+📊 PERFORMANS KONTROLÜ:
+1. Site dashboard > "Analytics"
+2. Lighthouse scores kontrol edin
+3. Core Web Vitals takibi
+
+═══════════════════════════════════════════════════════════════════
+                    GÜVENLİK VE BAKIM
+═══════════════════════════════════════════════════════════════════
+
+🔒 GÜVENLİK:
+- 🛡️ DDoS koruması dahil
+- 🔐 Otomatik SSL sertifikası
+- 🚫 Spam koruması aktif
+- 📋 Security headers yapılandırılmış
+
+🔄 BAKIM:
+- 📊 Uptime monitoring
+- 📈 Traffic analytics
+- 🐛 Error tracking
+- 📱 Mobile optimization
+
+═══════════════════════════════════════════════════════════════════
+                    SORUN GİDERME
+═══════════════════════════════════════════════════════════════════
+
+❌ YAYGIN SORUNLAR:
+
+1. 🚫 404 HATALARI:
+   - _redirects dosyasının doğru yüklendiğini kontrol edin
+   - netlify.toml'daki redirect ayarlarını kontrol edin
+
+2. 📧 FORM ÇALIŞMIYOR:
+   - HTML'de data-netlify="true" var mı?
+   - Form name attribute'u var mı?
+   - Bot field eklendi mi?
+
+3. 🐌 YAVAS YÜKLEME:
+   - Asset optimization açık mı?
+   - Images optimize edilmiş mi?
+   - CDN aktif mi?
+
+4. 🔒 SSL SORUNU:
+   - DNS ayarları doğru mu?
+   - Force HTTPS aktif mi?
+   - Mixed content var mı?
+
+═══════════════════════════════════════════════════════════════════
+                    NETLIFY FEATURES
+═══════════════════════════════════════════════════════════════════
+
+🎯 ÜCRETSİZ PLAN LIMITS:
+- 📊 100GB bandwidth/month
+- 🔄 300 build minutes/month
+- 📧 100 form submissions/month
+- 👥 1 concurrent build
+- 🌍 Global CDN
+
+💎 PRO FEATURES:
+- 🔄 Background functions
+- 🎯 A/B testing
+- 📊 Advanced analytics
+- 🔐 Password protection
+- 👥 Team collaboration
+
+═══════════════════════════════════════════════════════════════════
+                    DOMAIN AYARLARI
+═══════════════════════════════════════════════════════════════════
+
+🌐 CUSTOM DOMAIN EKLEME:
+
+1. 📝 DNS AYARLARI:
+   - A record: 75.2.60.5
+   - AAAA record: 2606:4700:10::6814:55b5
+   - CNAME (www): yoursite.netlify.app
+
+2. ✅ DOĞRULAMA:
+   - DNS propagation bekleyin (24 saat max)
+   - SSL sertifikası otomatik oluşur
+
+═══════════════════════════════════════════════════════════════════
+                    MONİTORİNG VE ANALİTİK
+═══════════════════════════════════════════════════════════════════
+
+📊 TAKİP EDİLECEKLER:
+- 👥 Visitor sayısı
+- 📄 Page views
+- 📧 Form submissions
+- ⚡ Site performance
+- 🐛 Error rates
+
+🔧 GOOGLE ANALYTICS:
+- GA4 tracking code ekleyin
+- script.js'te belirtilen yere
+
+═══════════════════════════════════════════════════════════════════
+                    YEDEKLEME VE GÜVENLİK
+═══════════════════════════════════════════════════════════════════
+
+💾 YEDEKLEME:
+- Git repository otomatik yedek
+- Netlify'da deploy history mevcut
+- Manual backup önerisi: Aylık
+
+🔐 GÜVENLİK:
+- Environment variables için .env kullanın
+- API keys'leri asla commit etmeyin
+- Form spam koruması aktif
+
+═══════════════════════════════════════════════════════════════════
+                        SONUÇ
+═══════════════════════════════════════════════════════════════════
+
+✅ DEPLOYMENT CHECKLIST:
+
+□ Tüm dosyalar yüklendi
+□ Site erişilebilir durumda
+□ Forms çalışıyor
+□ SSL aktif
+□ Performance test yapıldı
+□ Mobile responsive test
+□ Contact form test edildi
+□ 404 page çalışıyor
+□ Sitemap erişilebilir
+□ Analytics kuruldu
+
+🎉 BAŞARILI DEPLOYMENT!
+
+Siteniz artık canlı ve dünya çapında erişilebilir durumda!
+
+📞 DESTEK:
+- Netlify Docs: https://docs.netlify.com
+- Community: https://community.netlify.com
+- Email: support@netlify.com
+
+═══════════════════════════════════════════════════════════════════
