@@ -1,0 +1,12 @@
+İçerik Özeti
+============
+
+- Ana sayfa: Kahraman bölüm, özellikler, hakkında ve iletişim formu (demo).
+- Varlıklar: CSS, JS, favicon, robots.txt, sitemap.xml.
+- Tema: Koyu arayüz, Inter fontu, erişilebilirlik odaklı.
+İçerik Özeti
+============
+
+- Ana sayfa: Kahraman bölüm, özellikler, hakkında ve iletişim formu (demo).
+- Varlıklar: CSS, JS, favicon, robots.txt, sitemap.xml.
+- Tema: Koyu arayüz, Inter fontu, erişilebilirlik odaklı.
