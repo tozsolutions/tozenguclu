@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Toz Solutions
+Site: https://example.com
+Twitter: @tozsolutions
+Location: TR
+
+/* THANKS */
+Thanks to open web standards and the OSS community.
+
+/* SITE */
+Language: tr-TR
+Standards: HTML5, CSS3, ES2020
+Components: No framework, vanilla
+

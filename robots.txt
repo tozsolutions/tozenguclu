@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://tozsolutions.github.io/tozenguclu/sitemap.xml
+

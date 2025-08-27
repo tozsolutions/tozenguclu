@@ -1,0 +1,32 @@
+Toz En Güçlü — Yayına Alma Kılavuzu (GitHub Pages)
+
+1) Depo ayarları
+- GitHub → Repository → Settings → Pages
+- Source: Deploy from a branch
+- Branch: main, Folder: /(root)
+- Kaydet. URL: https://tozsolutions.github.io/tozenguclu/
+
+2) Otomatik dağıtım (CI)
+- .github/workflows/pages.yml dosyası her push'ta siteyi yayınlar.
+- Actions sekmesinde "Deploy static site to GitHub Pages" akışını kontrol edin.
+
+3) Yerelde önizleme
+- Komut: python3 -m http.server 8080
+- Tarayıcı: http://localhost:8080
+
+4) Özel alan adı (opsiyonel)
+- Settings → Pages → Custom domain'den alan adınızı tanımlayın.
+- DNS A/ALIAS ya da CNAME kayıtlarını GitHub Pages dökümanına göre ekleyin.
+
+5) SEO/Analitik
+- robots.txt ve sitemap.xml güncel. Gerekirse Search Console'a URL ekleyin.
+- Analytics için <head> içine izleme kodunuzu ekleyin.
+
+6) Önbellek ve statik varlıklar
+- Görseller `assets/` içinde. Gerekirse .svg/.webp tercih edin.
+- CDN kullanıyorsanız kök yolunu canonical URL ile hizalayın.
+
+7) İçerik güncelleme
+- `index.html` metinlerini düzenleyin.
+- İletişim formu için Formspree ID'nizi `action` parametresine koyun.
+

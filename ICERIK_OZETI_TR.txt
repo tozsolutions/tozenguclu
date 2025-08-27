@@ -1,0 +1,30 @@
+Site İçerik Özeti
+
+Marka: Toz En Güçlü
+Amaç: Hızlı, erişilebilir ve SEO-dostu kurumsal tanıtım sitesi
+Diller: tr-TR
+
+Sayfalar/Bölümler:
+- Ana (Hero): Başlık, kısa açıklama, iki çağrı (Teklif Al, Hizmetleri Gör)
+- Hakkımızda: Şirket yaklaşımı, kalite ve sürdürülebilirlik vurgusu
+- Hizmetler: Kurumsal Site, E-Ticaret, SEO ve Performans
+- Referanslar: 3 örnek çalışma maddesi
+- İletişim: Ad, e-posta, mesaj alanları; Formspree ile gönderim
+
+SEO Varlıkları:
+- Meta title/description, Open Graph ve Twitter kartları
+- robots.txt ve sitemap.xml
+- canonical link, JSON-LD Organization şeması
+
+Varlıklar:
+- assets/logo.svg
+- css/styles.css, js/main.js
+
+Dağıtım:
+- GitHub Pages (main branch, root)
+- Otomatik CI: .github/workflows/pages.yml
+
+Notlar:
+- Formspree endpoint'ini kendi ID'nizle güncelleyin
+- "example" URL'leri repo Pages URL'sine dönüştürüldü
+
