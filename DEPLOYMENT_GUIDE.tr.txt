@@ -1,0 +1,44 @@
+Dağıtım Kılavuzu (Statik Site + Nginx)
+=====================================
+
+Gereksinimler:
+- Docker 24+ yüklü olmalı
+
+İmajı oluşturma:
+- docker build -t mysite:latest .
+
+Lokal çalıştırma:
+- docker run --rm -p 8080:80 mysite:latest
+- Tarayıcı: http://localhost:8080
+
+Sunucuya dağıtım (örnek):
+- docker login
+- docker tag mysite:latest registry.example.com/mysite:latest
+- docker push registry.example.com/mysite:latest
+- Uzak sunucuda: docker run -d --name mysite -p 80:80 registry.example.com/mysite:latest
+
+Notlar:
+- İçerikler /usr/share/nginx/html altında servis edilir
+- robots.txt ve sitemap.xml kökte mevcuttur
+Dağıtım Kılavuzu (Statik Site + Nginx)
+=====================================
+
+Gereksinimler:
+- Docker 24+ yüklü olmalı
+
+İmajı oluşturma:
+- docker build -t mysite:latest .
+
+Lokal çalıştırma:
+- docker run --rm -p 8080:80 mysite:latest
+- Tarayıcı: http://localhost:8080
+
+Sunucuya dağıtım (örnek):
+- docker login
+- docker tag mysite:latest registry.example.com/mysite:latest
+- docker push registry.example.com/mysite:latest
+- Uzak sunucuda: docker run -d --name mysite -p 80:80 registry.example.com/mysite:latest
+
+Notlar:
+- İçerikler /usr/share/nginx/html altında servis edilir
+- robots.txt ve sitemap.xml kökte mevcuttur

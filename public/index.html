@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Web Sitesi</title>
+	<meta name="description" content="Modern, hızlı ve erişilebilir bir web sitesi.">
+	<meta name="theme-color" content="#0b1020">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+	<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+	<link rel="manifest" href="/manifest.webmanifest">
+	<meta property="og:title" content="Web Sitesi">
+	<meta property="og:description" content="Modern, hızlı ve erişilebilir bir web sitesi.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="/">
+	<meta property="og:image" content="/assets/img/og-image.png">
+	<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+	<header class="container">
+		<nav class="nav" aria-label="Ana menü">
+			<a class="logo" href="/">LOGO</a>
+			<button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu">Menü</button>
+			<ul id="primary-menu" class="menu">
+				<li><a href="#ozellikler">Özellikler</a></li>
+				<li><a href="#hakkinda">Hakkında</a></li>
+				<li><a href="#iletisim">İletişim</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<section class="hero" aria-labelledby="baslik">
+			<h1 id="baslik">Modern web deneyimi</h1>
+			<p>Hızlı, güvenli ve erişilebilir bir site altyapısı.</p>
+			<a class="button" href="#iletisim">Hemen Başla</a>
+		</section>
+		<section id="ozellikler" class="grid">
+			<article>
+				<h2>Performans</h2>
+				<p>Optimize edilmiş varlıklar ve en iyi uygulamalar.</p>
+			</article>
+			<article>
+				<h2>Erişilebilirlik</h2>
+				<p>WCAG yönergelerine uygun işaretleme.</p>
+			</article>
+			<article>
+				<h2>SEO</h2>
+				<p>Doğru meta etiketleri ve semantik HTML.</p>
+			</article>
+		</section>
+		<section id="hakkinda">
+			<h2>Hakkında</h2>
+			<p>Bu site minimal, bakımı kolay ve dağıtıma hazırdır.</p>
+		</section>
+		<section id="iletisim">
+			<h2>İletişim</h2>
+			<form id="contact-form" novalidate>
+				<label for="name">Ad Soyad</label>
+				<input id="name" name="name" required placeholder="Adınız">
+				<label for="email">E-posta</label>
+				<input id="email" name="email" type="email" required placeholder="ornek@mail.com">
+				<label for="message">Mesaj</label>
+				<textarea id="message" name="message" rows="5" required></textarea>
+				<button type="submit" class="button">Gönder</button>
+				<p id="form-status" role="status" aria-live="polite"></p>
+			</form>
+		</section>
+	</main>
+	<footer class="container">
+		<p>© <span id="year"></span> Web Sitesi • Tüm hakları saklıdır.</p>
+	</footer>
+	<script src="/assets/js/script.js" defer></script>
+</body>
+</html>
