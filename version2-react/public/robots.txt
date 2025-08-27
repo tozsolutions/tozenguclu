@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://yourwebsite.com/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /_next/static/
+
+# Allow important files
+Allow: /favicon.svg
+Allow: /manifest.json

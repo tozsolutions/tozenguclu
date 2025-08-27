@@ -5,7 +5,9 @@ class AIChatbot {
     constructor() {
         this.isOpen = false;
         this.messages = [];
-        this.apiEndpoint = 'https://your-render-app.onrender.com/api/chat'; // Render backend URL
+        // 🔧 BU URL'İ RENDER DEPLOYMENT'INDAN SONRA DEĞİŞTİRİN
+        // Örnek: https://modernsite-ai-backend.onrender.com/api/chat
+        this.apiEndpoint = 'https://your-render-app.onrender.com/api/chat'; // TODO: Render URL'ini buraya yazın
         this.init();
     }
 

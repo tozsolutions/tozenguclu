@@ -1,0 +1,23 @@
+{
+  "name": "ModernSite - React Web Application",
+  "short_name": "ModernSite",
+  "description": "Modern web tasarım ve AI destekli dijital çözümler",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#011836",
+  "theme_color": "#011836",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "tr",
+  "dir": "ltr",
+  "scope": "/",
+  "id": "modernsite-react-app"
+}
