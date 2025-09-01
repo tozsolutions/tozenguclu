@@ -3,17 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sayfa bulunamadı — 404</title>
+  <title>Sayfa bulunamadı — 404 | Toz En Güçlü</title>
+  <meta name="description" content="Aradığınız sayfa bulunamadı. Ana sayfaya dönebilir veya arama yapabilirsiniz.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/css/styles.css">
+  <meta name="robots" content="noindex">
 </head>
 <body>
-  <main class="site-main" style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center">
-    <div>
-      <h1>404</h1>
-      <p>Aradığınız sayfa bulunamadı.</p>
-      <p><a class="btn" href="/">Ana sayfaya dön</a></p>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="brand">
+        <img src="/assets/logo.svg" alt="Toz En Güçlü logo" class="logo" />
+        <span class="brand-name">Toz En Güçlü</span>
+      </div>
+    </div>
+  </header>
+  
+  <main class="site-main" style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center" role="main">
+    <div class="container">
+      <h1 style="font-size:4rem;margin:0;color:var(--brand)">404</h1>
+      <h2 style="margin:20px 0">Sayfa bulunamadı</h2>
+      <p style="color:var(--muted);margin-bottom:30px">Aradığınız sayfa mevcut değil veya taşınmış olabilir.</p>
+      <div class="actions">
+        <a class="btn primary" href="/">Ana sayfaya dön</a>
+        <a class="btn" href="/#iletisim">İletişime geç</a>
+      </div>
     </div>
   </main>
+  
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="yil"></span> Toz En Güçlü. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+  
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 

@@ -1,0 +1,57 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="50" y="50" width="1100" height="530" rx="20" fill="#111827" stroke="#1f2937"/>
+  
+  <!-- Logo -->
+  <rect x="100" y="120" width="80" height="80" rx="16" fill="#22c55e"/>
+  <path d="M130 170h20v4h-20zm0-12h20v4h-20z" fill="#052e16"/>
+  
+  <!-- Title -->
+  <text x="220" y="160" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#e5e7eb">
+    Toz En Güçlü
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="220" y="200" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#9ca3af">
+    Modern Web Çözümleri
+  </text>
+  
+  <!-- Description -->
+  <text x="100" y="300" font-family="Inter, system-ui, sans-serif" font-size="20" fill="#e5e7eb">
+    Performanslı, erişilebilir ve SEO-dostu web siteleri
+  </text>
+  
+  <!-- Features -->
+  <rect x="100" y="350" width="300" height="120" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="120" y="380" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#22c55e">
+    Kurumsal Site
+  </text>
+  <text x="120" y="410" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    Hızlı açılan, çok dilli,
+  </text>
+  <text x="120" y="430" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    erişilebilir web siteleri
+  </text>
+  
+  <rect x="450" y="350" width="300" height="120" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="470" y="380" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#22c55e">
+    E-Ticaret
+  </text>
+  <text x="470" y="410" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    Dönüşüm odaklı vitrin ve
+  </text>
+  <text x="470" y="430" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    ödeme entegrasyonları
+  </text>
+  
+  <rect x="800" y="350" width="300" height="120" rx="12" fill="#111827" stroke="#1f2937"/>
+  <text x="820" y="380" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#22c55e">
+    SEO ve Performans
+  </text>
+  <text x="820" y="410" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    Core Web Vitals uyumlu
+  </text>
+  <text x="820" y="430" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#9ca3af">
+    optimizasyon
+  </text>
+</svg>

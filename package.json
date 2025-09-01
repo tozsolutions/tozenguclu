@@ -1,0 +1,24 @@
+{
+  "name": "tozenguclu",
+  "version": "1.0.0",
+  "description": "Toz En Güçlü - Modern Web Çözümleri",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "build": "echo 'Static site - no build required'",
+    "lint": "npx eslint js/*.js --fix",
+    "validate": "npx html-validate *.html",
+    "lighthouse": "npx lighthouse http://localhost:8080 --output html --output-path ./lighthouse-report.html",
+    "test": "npm run validate && npm run lint"
+  },
+  "keywords": ["static", "website", "turkish", "business"],
+  "author": "Toz Solutions",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "html-validate": "^8.0.0",
+    "lighthouse": "^11.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

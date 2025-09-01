@@ -1,32 +1,131 @@
-Toz En Güçlü — Yayına Alma Kılavuzu (GitHub Pages)
+# Dağıtım Rehberi - Toz En Güçlü
 
-1) Depo ayarları
-- GitHub → Repository → Settings → Pages
-- Source: Deploy from a branch
-- Branch: main, Folder: /(root)
-- Kaydet. URL: https://tozsolutions.github.io/tozenguclu/
+Bu rehber, Toz En Güçlü web sitesinin farklı platformlarda nasıl dağıtılacağını açıklar.
 
-2) Otomatik dağıtım (CI)
-- .github/workflows/pages.yml dosyası her push'ta siteyi yayınlar.
-- Actions sekmesinde "Deploy static site to GitHub Pages" akışını kontrol edin.
+## Gereksinimler
 
-3) Yerelde önizleme
-- Komut: python3 -m http.server 8080
-- Tarayıcı: http://localhost:8080
+- Node.js 16+ (geliştirme araçları için)
+- Git
+- Modern web tarayıcısı
 
-4) Özel alan adı (opsiyonel)
-- Settings → Pages → Custom domain'den alan adınızı tanımlayın.
-- DNS A/ALIAS ya da CNAME kayıtlarını GitHub Pages dökümanına göre ekleyin.
+## Yerel Geliştirme
 
-5) SEO/Analitik
-- robots.txt ve sitemap.xml güncel. Gerekirse Search Console'a URL ekleyin.
-- Analytics için <head> içine izleme kodunuzu ekleyin.
+1. Depoyu klonlayın:
+```bash
+git clone https://github.com/tozsolutions/tozenguclu.git
+cd tozenguclu
+```
 
-6) Önbellek ve statik varlıklar
-- Görseller `assets/` içinde. Gerekirse .svg/.webp tercih edin.
-- CDN kullanıyorsanız kök yolunu canonical URL ile hizalayın.
+2. Yerel sunucuyu başlatın:
+```bash
+npm start
+# veya
+python3 -m http.server 8080
+```
 
-7) İçerik güncelleme
-- `index.html` metinlerini düzenleyin.
-- İletişim formu için Formspree ID'nizi `action` parametresine koyun.
+3. Tarayıcıda açın: `http://localhost:8080`
+
+## Dağıtım Seçenekleri
+
+### 1. GitHub Pages (Otomatik)
+
+Bu depo GitHub Actions ile otomatik dağıtım yapacak şekilde ayarlanmıştır:
+
+- `main` branch'ine push yaptığınızda otomatik dağıtım başlar
+- Site https://tozsolutions.github.io/tozenguclu/ adresinde yayınlanır
+- Ayarlama: Repository → Settings → Pages → Source: GitHub Actions
+
+### 2. Netlify
+
+1. [Netlify](https://netlify.com) hesabı oluşturun
+2. "New site from Git" seçin
+3. GitHub deposunu bağlayın
+4. Build settings:
+   - Build command: `echo "Static site"`
+   - Publish directory: `/` (root)
+5. Form işlevi için Netlify Forms otomatik çalışacaktır
+
+### 3. Vercel
+
+1. [Vercel](https://vercel.com) hesabı oluşturun
+2. GitHub deposunu import edin
+3. Otomatik olarak algılanacak ve dağıtılacaktır
+
+### 4. Docker ile Dağıtım
+
+```bash
+# Image oluştur
+docker build -t tozenguclu .
+
+# Çalıştır
+docker run -p 80:80 tozenguclu
+```
+
+### 5. Geleneksel Web Hosting
+
+1. Tüm dosyaları FTP/SFTP ile sunucuya yükleyin
+2. Ana dizine (`public_html` veya benzeri) yerleştirin
+3. SSL sertifikası aktif edin
+
+## Güvenlik Ayarları
+
+### Nginx (Önerilen)
+
+```nginx
+# SSL redirect
+server {
+    listen 80;
+    server_name example.com www.example.com;
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name example.com www.example.com;
+    
+    # SSL configuration
+    ssl_certificate /path/to/certificate.crt;
+    ssl_certificate_key /path/to/private.key;
+    
+    # Include nginx.conf content here
+    include /path/to/nginx.conf;
+}
+```
+
+## Domain Ayarları
+
+1. Domain DNS ayarlarında A record ekleyin
+2. SSL sertifikası alın (Let's Encrypt önerilir)
+3. www redirect ayarlayın
+
+## Performans Optimizasyonları
+
+- Gzip compression aktif
+- Static asset caching (1 yıl)
+- CDN kullanımı önerilir
+- Image optimization
+
+## İletişim Formu
+
+Form şu şekilde çalışır:
+- **Netlify**: Otomatik form handling
+- **GitHub Pages**: Demo mode
+- **Diğer**: Form action URL'ini güncelleyin
+
+## Monitoring
+
+- Google Analytics eklemek için `index.html`'e tracking code ekleyin
+- Google Search Console kurulumu yapın
+- Uptime monitoring servisi kullanın
+
+## Troubleshooting
+
+**Problem**: Site yüklenmiyor
+**Çözüm**: DNS propagation bekleyin (24 saat)
+
+**Problem**: Form çalışmıyor
+**Çözüm**: Platform-specific form handling kontrolü yapın
+
+**Problem**: Assets yüklenmiyor
+**Çözüm**: Relatif path'leri kontrol edin
 
