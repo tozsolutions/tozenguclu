@@ -13,15 +13,17 @@
   <meta property="og:title" content="Toz En Güçlü | Modern Web Çözümleri">
   <meta property="og:description" content="Performanslı, erişilebilir ve SEO-dostu web siteleri.">
   <meta property="og:url" content="https://tozsolutions.github.io/tozenguclu/">
-  <meta property="og:image" content="https://tozsolutions.github.io/tozenguclu/assets/og-cover.png">
+  <meta property="og:image" content="https://tozsolutions.github.io/tozenguclu/assets/og-cover.svg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Toz En Güçlü | Modern Web Çözümleri">
   <meta name="twitter:description" content="Performanslı, erişilebilir ve SEO-dostu web siteleri.">
-  <meta name="twitter:image" content="https://tozsolutions.github.io/tozenguclu/assets/og-cover.png">
+  <meta name="twitter:image" content="https://tozsolutions.github.io/tozenguclu/assets/og-cover.svg">
 
   <link rel="canonical" href="https://tozsolutions.github.io/tozenguclu/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,7 +110,11 @@
     <section id="iletisim" class="section">
       <div class="container">
         <h2>İletişim</h2>
-        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
+        <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <!-- Hidden field for spam protection -->
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field">
+          
           <label for="name">Ad Soyad</label>
           <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -119,6 +125,7 @@
           <textarea id="message" name="message" rows="5" required></textarea>
 
           <button class="btn primary" type="submit">Gönder</button>
+          <div id="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
     </section>
