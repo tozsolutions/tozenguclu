@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" x2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  
+  <!-- Logo -->
+  <rect x="100" y="200" width="120" height="120" rx="24" fill="url(#brand)"/>
+  <path d="M140 280h40v8H140zM140 260h40v8H140z" fill="#052e16"/>
+  
+  <!-- Text -->
+  <text x="260" y="280" font-family="Inter, system-ui, sans-serif" font-size="48" font-weight="700" fill="#e5e7eb">Toz En Güçlü</text>
+  <text x="260" y="320" font-family="Inter, system-ui, sans-serif" font-size="24" fill="#9ca3af">Modern, Hızlı ve Güvenilir Web Siteleri</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="1000" cy="150" r="80" fill="#22c55e" opacity="0.1"/>
+  <circle cx="1100" cy="400" r="60" fill="#16a34a" opacity="0.1"/>
+</svg>

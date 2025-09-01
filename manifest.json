@@ -1,0 +1,23 @@
+{
+  "name": "Toz En Güçlü",
+  "short_name": "TozEnGuclu",
+  "description": "Modern, hızlı ve güvenilir web siteleri",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#22c55e",
+  "lang": "tr",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/logo.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"]
+}
