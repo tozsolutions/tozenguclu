@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
@@ -7,7 +7,6 @@
   <title>Toz En Güçlü | Modern Web Çözümleri</title>
   <meta name="description" content="Toz En Güçlü: Performanslı, erişilebilir ve SEO-dostu web siteleri. Tasarım, geliştirme ve ölçeklenebilir barındırma çözümleri.">
   <meta name="theme-color" content="#0f172a">
-  
   <!-- Favicon and app icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="alternate icon" href="assets/favicon.svg">
@@ -45,14 +44,14 @@
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container">
       <div class="brand">
-        <img src="assets/logo.svg" alt="Toz En Güçlü logo" class="logo" />
+        <img src="assets/logo.svg" alt="Toz En Güçlü logo" class="logo">
         <span class="brand-name">Toz En Güçlü</span>
       </div>
-      <nav class="nav" role="navigation" aria-label="Ana menü">
-        <button id="menuToggle" class="nav-toggle" aria-expanded="false" aria-controls="ana-menu">Menü</button>
+      <nav class="nav" aria-label="Ana menü">
+        <button id="menuToggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="ana-menu">Menü</button>
         <ul id="ana-menu" class="nav-list">
           <li><a href="#hakkimizda">Hakkımızda</a></li>
           <li><a href="#hizmetler">Hizmetler</a></li>
@@ -63,7 +62,7 @@
     </div>
   </header>
 
-  <main id="icerik" class="site-main" role="main">
+  <main id="icerik" class="site-main">
     <section class="hero">
       <div class="container">
         <h1>Modern, Hızlı ve Güvenilir Web Siteleri</h1>
@@ -102,7 +101,7 @@
     <section id="referanslar" class="section">
       <div class="container">
         <h2>Referanslar</h2>
-        <ul class="references" aria-label="Öne çıkan çalışmalar">
+        <ul class="references">
           <li>Proje A – Kurumsal tanıtım sitesi</li>
           <li>Proje B – E-ticaret migrasyonu</li>
           <li>Proje C – Headless CMS entegrasyonu</li>
@@ -113,23 +112,44 @@
     <section id="iletisim" class="section">
       <div class="container">
         <h2>İletişim</h2>
-        <form class="contact-form" action="https://formspree.io/f/your-id" method="POST">
-          <label for="name">Ad Soyad</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
+        <form class="contact-form" action="#" method="POST" id="contact-form">
+          <div class="form-group">
+            <label for="name">Ad Soyad <span>*</span></label>
+            <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+            <span id="name-error" class="error-message" role="alert"></span>
+          </div>
 
-          <label for="email">E-posta</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+          <div class="form-group">
+            <label for="email">E-posta <span>*</span></label>
+            <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+            <span id="email-error" class="error-message" role="alert"></span>
+          </div>
 
-          <label for="message">Mesaj</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-group">
+            <label for="subject">Konu</label>
+            <input id="subject" name="subject" type="text" aria-describedby="subject-help">
+            <small id="subject-help" class="help-text">Projeniz hakkında kısa bir başlık</small>
+          </div>
 
-          <button class="btn primary" type="submit">Gönder</button>
+          <div class="form-group">
+            <label for="message">Mesaj <span>*</span></label>
+            <textarea id="message" name="message" rows="5" required aria-describedby="message-error message-help"></textarea>
+            <small id="message-help" class="help-text">Projenizin detaylarını paylaşın</small>
+            <span id="message-error" class="error-message" role="alert"></span>
+          </div>
+
+          <button class="btn primary" type="submit" id="submit-btn">
+            <span class="btn-text">Gönder</span>
+            <span class="btn-loading" hidden>Gönderiliyor...</span>
+          </button>
+          
+          <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container">
       <p>© <span id="yil"></span> Toz En Güçlü. Tüm hakları saklıdır.</p>
       <nav aria-label="Alt menü">
@@ -140,6 +160,20 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script>
+    // Register service worker for PWA functionality
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      });
+    }
+  </script>
 </body>
 </html>
 

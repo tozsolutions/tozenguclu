@@ -1,0 +1,5 @@
+Contact: https://github.com/tozsolutions/tozenguclu/security/advisories/new
+Expires: 2025-12-31T23:59:59.000Z
+Acknowledgments: https://github.com/tozsolutions/tozenguclu/security/advisories
+Preferred-Languages: tr, en
+Canonical: https://tozsolutions.github.io/tozenguclu/.well-known/security.txt

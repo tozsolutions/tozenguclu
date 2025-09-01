@@ -1,0 +1,46 @@
+{
+  "name": "tozenguclu",
+  "version": "1.0.0",
+  "description": "Toz En Güçlü - Modern web çözümleri sunan statik web sitesi",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 8080",
+    "build": "npm run lint && npm run validate",
+    "lint": "npx htmlhint --config .htmlhintrc *.html && npx stylelint css/*.css",
+    "lint:fix": "npx stylelint css/*.css --fix",
+    "validate": "npx html-validate *.html",
+    "test": "npm run lint && npm run validate && npm run test:lighthouse",
+    "test:lighthouse": "echo 'Lighthouse tests would run here'",
+    "format": "npx prettier --write *.html css/*.css js/*.js *.json *.md",
+    "docker:build": "docker build -t tozenguclu .",
+    "docker:run": "docker run -p 8080:80 tozenguclu",
+    "docker:test": "docker run --rm -p 8080:80 tozenguclu &; sleep 5; curl -f http://localhost:8080 || exit 1"
+  },
+  "keywords": [
+    "web-development",
+    "static-site",
+    "seo",
+    "performance",
+    "turkish",
+    "business-website"
+  ],
+  "author": "Toz Solutions",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0",
+    "html-validate": "^8.0.0",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tozsolutions/tozenguclu.git"
+  },
+  "homepage": "https://tozsolutions.github.io/tozenguclu/",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

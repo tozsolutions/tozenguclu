@@ -1,14 +1,36 @@
 /* TEAM */
 Developer: Toz Solutions
-Site: https://example.com
-Twitter: @tozsolutions
-Location: TR
+Contact: https://github.com/tozsolutions/tozenguclu/issues
+Site: https://tozsolutions.github.io/tozenguclu/
+Location: Turkey
 
 /* THANKS */
 Thanks to open web standards and the OSS community.
+Special thanks to contributors and users who help improve this project.
 
 /* SITE */
-Language: tr-TR
-Standards: HTML5, CSS3, ES2020
-Components: No framework, vanilla
+Last update: 2024
+Language: Turkish (tr-TR)
+Doctype: HTML5
+IDE: Various
+Standards: HTML5, CSS3, ES2020+
+Components: Vanilla JavaScript, no frameworks
+Build: Static site with PWA capabilities
+Hosting: GitHub Pages
+Version: 1.0.0
+
+/* TECHNOLOGIES */
+Frontend: HTML5, CSS3, Vanilla JavaScript
+Icons: SVG
+Fonts: Inter (Google Fonts)
+Deployment: GitHub Actions, Docker
+Server: Nginx (for Docker deployment)
+PWA: Service Worker, Web App Manifest
+
+/* PERFORMANCE */
+Optimized for Core Web Vitals
+Lighthouse Score Target: 95+
+Gzip compression enabled
+Static asset caching
+Offline functionality via Service Worker
 
